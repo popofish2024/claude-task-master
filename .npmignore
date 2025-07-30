@@ -1,46 +1,82 @@
-# Development files
-.git
-.github
-.vscode
-.idea
-.DS_Store
-
-# Logs
-logs
-*.log
-npm-debug.log*
-dev-debug.log
-init-debug.log
-
-# Source files not needed in the package
-src
-test
-tests
-docs
-examples
-.editorconfig
-.eslintrc
-.prettierrc
-.travis.yml
-.gitlab-ci.yml
-tsconfig.json
-jest.config.js
-
-# Original project files
-tasks.json
-tasks/
-prd.txt
-scripts/prd.txt
-.env 
-
-# Temporary files
-.tmp
-.temp
+# 开发相关文件
+.git/
+.github/
+.vscode/
+.idea/
 *.swp
 *.swo
+*~
 
-# Node modules
+# 测试文件
+tests/
+test/
+*.test.js
+*.spec.js
+coverage/
+.nyc_output/
+junit.xml
+
+# 构建和临时文件
+dist/
+build/
+tmp/
+temp/
+.temp/
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+
+# 日志文件
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 依赖目录
 node_modules/
 
-# Debug files
-*.debug 
+# 环境变量文件
+.env
+.env.*
+!.env.example
+
+# 配置文件
+.eslintrc*
+.prettierrc*
+.editorconfig
+biome.json
+jest.config.js
+.babelrc*
+tsconfig.json
+
+# 文档和示例（保留主要README）
+docs/
+examples/
+*.md
+!README.md
+!README-task-master.md
+
+# Task Master 特定文件
+tasks/
+_task-master-mcp_logs.txt
+.taskmasterconfig.backup
+.taskmasterconfig
+scripts/task-complexity-report.json
+
+# 开发脚本
+scripts/build-package.js
+scripts/pack.sh
+scripts/test-*.js
+scripts/dev.js
+
+# 版本控制
+.changeset/
+CHANGELOG.md
+
+# 其他
+.DS_Store
+Thumbs.db
+*.tgz
